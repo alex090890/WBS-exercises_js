@@ -13,7 +13,7 @@ const fs = require('fs');
 app.set('view engine', 'ejs');
 
 //Exercise 2
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.send(`
     <html lang="en">
     <head>
@@ -25,7 +25,11 @@ app.get('/', (req, res) => {
       </body>
     </html>
     `);
-});
+});*/
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+})
 
 //Exercise 3
 app.delete('/', (req, res) => {
