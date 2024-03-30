@@ -9,6 +9,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 const axios = require('axios');
 const fs = require('fs');
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://Cluster60737:ilya2003@myatlasclusteredu.zpwnhpa.mongodb.net/?retryWrites=true&w=majority&appName=myAtlasClusterEDU";
+console.log(uri);
 
 app.set('view engine', 'ejs');
 
